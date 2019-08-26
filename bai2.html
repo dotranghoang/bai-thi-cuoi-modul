@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let lengthArr = parseInt(prompt("Nhập vào độ dài của mảng"));
+        let arr = [];
+        for (var i = 0; i < lengthArr; i++) {
+            arr[i] = parseInt(prompt("Nhập từng phần tử trong mảng"));
+        }
+        document.write("Mảng vừa nhập: " + arr.join(",") + "<br/>");
+        let int = parseInt(prompt("Nhập 1 số nguyên "));
+            document.write("Số nguyên vừa nhập: " + int + "<br/>");
+        function tryRemoveFromArray(arr,int) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == int) {
+                    arr.splice(i,1);
+                    i--;
+                }
+            }
+            return arr.join(",");
+        }
+        document.write("Mảng sau đó: " + tryRemoveFromArray(arr,int));
+    </script>
+
+</body>
+
+</html>

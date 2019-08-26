@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000px" height="500px" style="border:1px solid red ;"></canvas>
+    <script>
+        function Retangle(x, y, width, height, color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+
+            this.getRectangle = function () {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = this.color ;
+            ctx.fillRect(x, y, this.width, this.height);
+            };
+        }
+      let render = new Retangle(10,10,200,100,"#000000");
+      render.getRectangle();
+    </script>
+</body>
+
+</html>
